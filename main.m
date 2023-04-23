@@ -11,8 +11,12 @@ disp(" - calc  = 0x" + crc_hex);
 crc_hex = crc_3_gsm([message crc_hex], true);% correct check
 disp(" - check = 0x" + crc_hex); disp(" ");
 %--use-bitwise-algorithm------------------------------------------------------------------------------------------------------------------
-disp(" CRC-3/ROHC");% ASCII:"123456789" crc_check:"0x4"
+disp(" CRC-3/ROHC");% ASCII:"123456789" crc_check:"0x6"
 crc_hex = crc_3_rohc(message, false);% correct calculation
+disp(" - calc  = 0x" + crc_hex); disp(" ");
+%--use-bitwise-algorithm------------------------------------------------------------------------------------------------------------------
+disp(" CRC-4/G-704");% ASCII:"123456789" crc_check:"0x7"
+crc_hex = crc_4_g_704(message, false);% correct calculation
 disp(" - calc  = 0x" + crc_hex); disp(" ");
 %--use-bitwise-algorithm------------------------------------------------------------------------------------------------------------------
 disp(" CRC-6/G-704. Alias: CRC-6/ITU");% ASCII:"123456789" crc_check:"0x06"

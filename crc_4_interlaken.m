@@ -16,7 +16,7 @@ function out = crc_4_interlaken(message, check)
 % - Definition: Init, RefIn, RefOut, XorOut (Appendix B, p.48)
 
 crc.width   = 4;
-crc.poly    = [0 0 1 1];% x^3 + x^1 + x^0 (0x3)
+crc.poly    = [0 0 1 1];% x^4 + x^1 + x^0 (0x3)
 crc.init    = true(1,length(crc.poly));% [1 1 1 1];% (0xf)
 crc.residue = [0 0 1 0];% (0x2)
 crc.refin   = false;

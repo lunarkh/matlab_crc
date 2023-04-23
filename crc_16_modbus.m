@@ -19,7 +19,7 @@ function out = crc_16_modbus(message, check)
 crc.width   = 16;
 crc.poly    = [1 0 0 0   0 0 0 0   0 0 0 0   0 1 0 1];% x^16 + x^15 + x^2 + x^0 (0x8005)
 crc.init    = true(1,length(crc.poly));% [1 1 1 1   1 1 1 1   1 1 1 1   1 1 1 1];% (0xFFFF)
-crc.residue = false(1,length(crc.poly));% [0 0 0 0   0 0 0 0   0 0 0 0   0 0 0 0];% (0x0000) (*) for current func its must be -> 0xFFFF
+crc.residue = false(1,length(crc.poly));% [0 0 0 0   0 0 0 0   0 0 0 0   0 0 0 0];% (0x0000)
 crc.refin   = true;
 crc.refout  = true;
 crc.xorout  = false(1,length(crc.poly));% [0 0 0 0   0 0 0 0   0 0 0 0   0 0 0 0];% (0x0000)
@@ -30,7 +30,6 @@ if(check)% CRC presented low byte first. (14)                                   
 else
     crc.message = message;
 end
-% residue = init (*)
 crc.calc_bin = crc_uni(crc.width, crc.poly, crc.init, crc.init, crc.refin, crc.refout, crc.xorout, crc.mode, crc.message);
 
 out =  binaryVectorToHex(crc.calc_bin);

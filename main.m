@@ -4,6 +4,12 @@ message = '313233343536373839';% ASCII:"123456789"
 % message = '41424344434146454641434531323334';% ASCII:"ABCDCAFEFACE1234"
 
 disp(" message = " + message + " hex"); disp(" ");
-crc_less_16;% crc less than 16
-crc_equal_16_and_less_32;% crc equals 16 and les than 32
-crc_equal_32_and_over;% crc equals 32 and more
+
+addpath(genpath('.\crc_param_3_15'));
+crc_scr_3_15;% crc less than 16
+
+addpath(genpath('.\crc_param_16'));
+crc_scr_16;% crc equals 16 and les than 32
+
+addpath(genpath('.\crc_param_17_82'));
+crc_scr_17_82;% crc equals 32 and more

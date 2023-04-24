@@ -24,6 +24,9 @@ disp(" CRC-5/G-704");% ASCII:"123456789" crc_check:"0x07"
 crc_hex = crc_5_g_704(message, false); disp(" - calc  = 0x" + crc_hex);
 crc_hex = crc_5_g_704([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");
 
+disp(" CRC-5/USB");% ASCII:"123456789" crc_check:"0x19"
+crc_hex = crc_5_usb(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");
+
 disp(" CRC-6/G-704. Alias: CRC-6/ITU");% ASCII:"123456789" crc_check:"0x06"
 crc_hex = crc_6_g_704(message, false);          disp(" - calc  = 0x" + crc_hex);
 crc_hex = crc_6_g_704([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");

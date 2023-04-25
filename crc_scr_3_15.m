@@ -38,3 +38,6 @@ crc_hex = crc_6_g_704([message crc_hex], true); disp(" - check = 0x" + crc_hex);
 
 disp(" CRC-6/GSM");% ASCII:"123456789" crc_check:"0x13"
 crc_hex = crc_6_gsm(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-7/MMC");% ASCII:"123456789" crc_check:"0x75"
+crc_hex = crc_7_mmc(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");

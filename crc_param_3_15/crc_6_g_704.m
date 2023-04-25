@@ -16,7 +16,7 @@ function out = crc_6_g_704(message, check)
 % - Shift register diagram (Annex A.1, p.35)
 
 crc.width   = 6;
-crc.poly    = [0 0   0 0 1 1];% x^6 + x^1 + x^0 (0x3)
+crc.poly    = [0 0   0 0 1 1];% x^6 + x^1 + x^0 (0x03)
 crc.init    = false(1,length(crc.poly));% [0 0   0 0 0 0];% (0x00)
 crc.residue = false(1,length(crc.poly));% [0 0   0 0 0 0];% (0x00)
 crc.refin   = true;

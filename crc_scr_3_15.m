@@ -22,6 +22,19 @@ crc_hex = crc_5_g_704([message crc_hex], true); disp(" - check = 0x" + crc_hex);
 disp(" CRC-5/USB");% ASCII:"123456789" crc_check:"0x19"
 crc_hex = crc_5_usb(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");
 
+disp(" CRC-6/CDMA2000-A");% ASCII:"123456789" crc_check:"0x0d"
+crc_hex = crc_6_cdma2000_a(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-6/CDMA2000-B");% ASCII:"123456789" crc_check:"0x3b"
+crc_hex = crc_6_cdma2000_b(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-6/DARC");% ASCII:"123456789" crc_check:"0x26"
+crc_hex = crc_6_darc(message, false); disp(" - calc  = 0x" + crc_hex);
+crc_hex = crc_6_darc([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");
+
 disp(" CRC-6/G-704. Alias: CRC-6/ITU");% ASCII:"123456789" crc_check:"0x06"
 crc_hex = crc_6_g_704(message, false);          disp(" - calc  = 0x" + crc_hex);
 crc_hex = crc_6_g_704([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-6/GSM");% ASCII:"123456789" crc_check:"0x13"
+crc_hex = crc_6_gsm(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");

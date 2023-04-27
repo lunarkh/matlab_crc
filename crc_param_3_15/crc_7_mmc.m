@@ -8,10 +8,18 @@ function out = crc_7_mmc(message, check)
 % xorout  = 0x00
 % check   = 0x75 for ASCII:"123456789"
 % residue = 0x00
-% name    = "CRC-6/GSM"
+% name    = "CRC-7/MMC"
 % Class: academic
-% ETSI TS 100 909 version 8.9.0 (January 2005)
-% - Full mathematical description (Section 3.9.4.3, pp.31–3 — Section 3.10.7.3, pp.47–9 — Section 4.6, p.64 — Section 5.3.2, p.95)
+% Alias: CRC-7
+% Used in the MultiMediaCard interface.
+% Additional reference courtesy of Greg Nelson, Grammatech Inc.
+% JEDEC Standard JESD84-A441 (March 2010) (registration required)
+% - Full definition (Section 10.2, pp.157–8)
+% - Shift register diagram (Figure 53, p.158)
+% Linux contributors (14 January 2021), Linux module lib/crc7.c
+% - Code: C
+% Nokia Corporation (2008), Linux module drivers/net/wireless/ti/wl1251/spi.c
+% - Definition: Init (l.104)
 
 crc.width   = 7;
 crc.poly    = [0 0 0   1 0 0 1];% x^7 + x^3 + x^0 (0x09)

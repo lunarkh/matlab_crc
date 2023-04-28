@@ -5,7 +5,7 @@ message = '313233343536373839';% ASCII:"123456789"
 
 disp(" message = " + message + " hex"); disp(" ");
 
-addpath(genpath('.\crc_param_3_15'));
+addpath(genpath('.\crc_param_03_15'));
 crc_scr_3_15;% crc less than 16
 
 addpath(genpath('.\crc_param_16'));

@@ -50,3 +50,7 @@ crc_hex = crc_7_umts(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ")
 
 disp(" CRC-8/AUTOSAR");% ASCII:"123456789" crc_check:"0xdf"
 crc_hex = crc_8_autosar(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-8/BLUETOOTH");% ASCII:"123456789" crc_check:"0x26"
+crc_hex = crc_8_bluetooth(message, false); disp(" - calc  = 0x" + crc_hex);
+crc_hex = crc_8_bluetooth([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");

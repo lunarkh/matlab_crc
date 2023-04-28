@@ -47,3 +47,6 @@ crc_hex = crc_7_rohc(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ")
 
 disp(" CRC-7/UMTS");% ASCII:"123456789" crc_check:"0x61"
 crc_hex = crc_7_umts(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-8/AUTOSAR");% ASCII:"123456789" crc_check:"0xdf"
+crc_hex = crc_8_autosar(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");

@@ -44,3 +44,6 @@ crc_hex = crc_7_mmc(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");
 
 disp(" CRC-7/ROHC");% ASCII:"123456789" crc_check:"0x53"
 crc_hex = crc_7_rohc(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-7/UMTS");% ASCII:"123456789" crc_check:"0x61"
+crc_hex = crc_7_umts(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");

@@ -4,10 +4,11 @@ function out_bin = crc_uni(width, poly, init, residue, refin, refout, xorout, ch
 %         ... for x^6+X^1+x^0 = 00 0011 msb bit '1' not use...
 %         ... for x^16+X^12+X^5+X^0 = 0001 0000 0010 0001 msb bit '1' not use
 % init    -> shift register init value for calculate crc
+% residue -> shift register init value for check crc
 % refin   -> reflect every byte
 % refout  -> reflect bit array before xorout
 % xorout  -> xor out message from func
-% init    -> shift register init value for check crc
+% init    -> shift register init value for genertate crc
 % check   -> true-check crc in message, false-generate crc
 % message -> input data char '0123456789abcdef' - HEX value, not ASCII
 

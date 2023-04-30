@@ -65,3 +65,10 @@ crc_hex = crc_8_darc([message crc_hex], true); disp(" - check = 0x" + crc_hex); 
 disp(" CRC-8/DVB-S2");% ASCII:"123456789" crc_check:"0xbc"
 crc_hex = crc_8_dvb_s2(message, false); disp(" - calc  = 0x" + crc_hex);
 crc_hex = crc_8_dvb_s2([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-8/GSM-A");% ASCII:"123456789" crc_check:"0x37"
+crc_hex = crc_8_gsm_a(message, false); disp(" - calc  = 0x" + crc_hex);
+crc_hex = crc_8_gsm_a([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-8/GSM-B");% ASCII:"123456789" crc_check:"0x94"
+crc_hex = crc_8_gsm_b(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");

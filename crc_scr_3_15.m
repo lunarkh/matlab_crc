@@ -57,3 +57,11 @@ crc_hex = crc_8_bluetooth([message crc_hex], true); disp(" - check = 0x" + crc_h
 
 disp(" CRC-8/CDMA2000");% ASCII:"123456789" crc_check:"0xda"
 crc_hex = crc_8_cdma2000(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-8/DARC");% ASCII:"123456789" crc_check:"0x15"
+crc_hex = crc_8_darc(message, false); disp(" - calc  = 0x" + crc_hex);
+crc_hex = crc_8_darc([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-8/DVB-S2");% ASCII:"123456789" crc_check:"0xbc"
+crc_hex = crc_8_dvb_s2(message, false); disp(" - calc  = 0x" + crc_hex);
+crc_hex = crc_8_dvb_s2([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");

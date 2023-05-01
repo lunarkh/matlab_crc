@@ -72,3 +72,37 @@ crc_hex = crc_8_gsm_a([message crc_hex], true); disp(" - check = 0x" + crc_hex);
 
 disp(" CRC-8/GSM-B");% ASCII:"123456789" crc_check:"0x94"
 crc_hex = crc_8_gsm_b(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-8/HITAG");% ASCII:"123456789" crc_check:"0xb4"
+crc_hex = crc_8_hitag(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-8/I-432-1");% ASCII:"123456789" crc_check:"0xa1"
+crc_hex = crc_8_i_432_1(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-8/I-CODE");% ASCII:"123456789" crc_check:"0x7e"
+crc_hex = crc_8_i_code(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-8/LTE");% ASCII:"123456789" crc_check:"0xea"
+crc_hex = crc_8_lte(message, false); disp(" - calc  = 0x" + crc_hex);
+crc_hex = crc_8_lte([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-8/MAXIM-DOW");% ASCII:"123456789" crc_check:"0xa1"
+crc_hex = crc_8_maxim_dow(message, false); disp(" - calc  = 0x" + crc_hex);
+crc_hex = crc_8_maxim_dow([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-8/MIFARE-MAD");% ASCII:"123456789" crc_check:"0x99"
+crc_hex = crc_8_mifare_mad(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-8/NRSC-5");% ASCII:"123456789" crc_check:"0xf7"
+crc_hex = crc_8_nrsc_5(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-8/OPENSAFETY");% ASCII:"123456789" crc_check:"0x3e"
+crc_hex = crc_8_opensafety(message, false); disp(" - calc  = 0x" + crc_hex);
+crc_hex = crc_8_opensafety([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-8/ROHC");% ASCII:"123456789" crc_check:"0xd0"
+crc_hex = crc_8_rohc(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-8/SAE-J1850");% ASCII:"123456789" crc_check:"0x4b"
+crc_hex = crc_8_sae_j1850(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");
+

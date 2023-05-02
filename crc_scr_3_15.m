@@ -112,3 +112,7 @@ crc_hex = crc_8_smbus([message crc_hex], true); disp(" - check = 0x" + crc_hex);
 
 disp(" CRC-8/TECH-3250");% ASCII:"123456789" crc_check:"0x97"
 crc_hex = crc_8_tech_3250(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-8/WCDMA");% ASCII:"123456789" crc_check:"0x25"
+crc_hex = crc_8_wcdma(message, false); disp(" - calc  = 0x" + crc_hex);
+crc_hex = crc_8_wcdma([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");

@@ -2,7 +2,7 @@ function out = crc_10_gsm(message, check)
 %--settings-------
 % width   = 10
 % poly    = 0x175
-% init    = 0x00
+% init    = 0x000
 % refin   = false
 % refout  = false
 % xorout  = 0x3ff

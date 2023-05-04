@@ -125,3 +125,9 @@ crc_hex = crc_10_cdma2000(message, false); disp(" - calc  = 0x" + crc_hex); disp
 
 disp(" CRC-10/GSM");% ASCII:"123456789" crc_check:"0x12a"
 crc_hex = crc_10_gsm(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-11/FLEXRAY");% ASCII:"123456789" crc_check:"0x5a3"
+crc_hex = crc_11_flexray(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-11/UMTS");% ASCII:"123456789" crc_check:"0x061"
+crc_hex = crc_11_umts(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");

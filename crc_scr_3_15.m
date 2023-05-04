@@ -122,3 +122,6 @@ crc_hex = crc_10_atm(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ")
 
 disp(" CRC-10/CDMA2000");% ASCII:"123456789" crc_check:"0x233"
 crc_hex = crc_10_cdma2000(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-10/GSM");% ASCII:"123456789" crc_check:"0x12a"
+crc_hex = crc_10_gsm(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");

@@ -131,3 +131,6 @@ crc_hex = crc_11_flexray(message, false); disp(" - calc  = 0x" + crc_hex); disp(
 
 disp(" CRC-11/UMTS");% ASCII:"123456789" crc_check:"0x061"
 crc_hex = crc_11_umts(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-12/CDMA2000");% ASCII:"123456789" crc_check:"0xd4d"
+crc_hex = crc_12_cdma2000(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");

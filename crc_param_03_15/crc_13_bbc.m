@@ -8,7 +8,7 @@ function out = crc_13_bbc(message, check)
 % xorout  = 0x0000
 % check   = 0x04fa for ASCII:"123456789"
 % residue = 0x0000
-% name    = "CRC-12/BBC"
+% name    = "CRC-13/BBC"
 % Class: attested
 % S. R. Ely, D. T. Wright, British Broadcasting Corporation (March 1982),
 % L.F. Radio-data: specification of the BBC experimental transmissions 1982
@@ -24,7 +24,7 @@ crc.init    = false(1,length(crc.poly));% [0   0 0 0 0   0 0 0 0   0 0 0 0];% (0
 crc.residue = false(1,length(crc.poly));% [0   0 0 0 0   0 0 0 0   0 0 0 0];% (0x0000)
 crc.refin   = false;
 crc.refout  = false;
-crc.xorout  = false(1,length(crc.poly));% [0   0 0 0 0   0 0 0 0   0 0 0 0];% (0x000)
+crc.xorout  = false(1,length(crc.poly));% [0   0 0 0 0   0 0 0 0   0 0 0 0];% (0x0000)
 crc.mode    = check;
 crc.message = message;
 

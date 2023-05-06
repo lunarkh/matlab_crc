@@ -138,3 +138,6 @@ crc_hex = crc_12_cdma2000(message, false); disp(" - calc  = 0x" + crc_hex); disp
 disp(" CRC-12/DECT");% ASCII:"123456789" crc_check:"0xf5b"
 crc_hex = crc_12_dect(message, false); disp(" - calc  = 0x" + crc_hex);
 crc_hex = crc_12_dect([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-12/GSM");% ASCII:"123456789" crc_check:"0xb34"
+crc_hex = crc_12_gsm(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");

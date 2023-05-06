@@ -10,10 +10,12 @@ function out = crc_12_umts(message, check)
 % residue = 0x000
 % name    = "CRC-12/GSM"
 % Class: academic
-% ETSI TS 100 909 version 8.9.0 (January 2005)
-% - Full mathematical description (Section 5.1.5.1.4, p.72 — Section 5.1.6.1.4, p.75 —
-%   Section 5.1.7.1.4, p.77 — Section 5.1.8.1.4, p.78 — Section 5.1.9.1.4, p.81 —
-%   Section 5.1.10.1.4, p.85 — Section 5.1.11.1.4, p.87 — Section 5.1.12.1.4, p.91 — Section 5.1.13.1.4, p.93)
+% Alias: CRC-12/3GPP
+% The crossed-endian definition is unusual but explicit. Researched by "markw_be" at the Computer Interfacing Forum.
+% 3rd Generation Partnership Project (3GPP) TS 25.212 version 16.0.0 (July 2020)
+% (zipped MS Word document) — ETSI TS 125 212 version 16.0.0 (September 2020)
+% - Mathematical description, defining Width, Poly, Init, Residue (Section 4.2.1.1, pp.19–20)
+% - Attachment relation, defining RefIn ^ RefOut (Section 4.2.1.2, p.20)
 
 crc.width   = 12;
 crc.poly    = [1 0 0 0   0 0 0 0   1 1 1 1];% x^12 + x^11 + x^3 + x^2 + x^1 + x^0(0x80f)

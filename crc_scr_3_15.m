@@ -141,3 +141,6 @@ crc_hex = crc_12_dect([message crc_hex], true); disp(" - check = 0x" + crc_hex);
 
 disp(" CRC-12/GSM");% ASCII:"123456789" crc_check:"0xb34"
 crc_hex = crc_12_gsm(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-12/UMTS");% ASCII:"123456789" crc_check:"0xdaf"
+crc_hex = crc_12_umts(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");

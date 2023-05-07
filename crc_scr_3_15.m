@@ -153,3 +153,6 @@ crc_hex = crc_14_darc(message, false); disp(" - calc  = 0x" + crc_hex); disp(" "
 
 disp(" CRC-14/gsm");% ASCII:"123456789" crc_check:"0x30ae"
 crc_hex = crc_14_gsm(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-15/CAN");% ASCII:"123456789" crc_check:"0x059e"
+crc_hex = crc_15_can(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");

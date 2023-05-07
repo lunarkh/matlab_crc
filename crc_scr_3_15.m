@@ -150,3 +150,6 @@ crc_hex = crc_13_bbc(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ")
 
 disp(" CRC-14/DARC");% ASCII:"123456789" crc_check:"0x082d"
 crc_hex = crc_14_darc(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");
+
+disp(" CRC-14/gsm");% ASCII:"123456789" crc_check:"0x30ae"
+crc_hex = crc_14_gsm(message, false); disp(" - calc  = 0x" + crc_hex); disp(" ");

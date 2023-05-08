@@ -2,11 +2,11 @@ function out = crc_16_modbus(message, check)
 %--settings-------
 % width   = 16
 % poly    = 0x8005
-% init    = 0xFFFF
+% init    = 0xffff
 % refin   = true
 % refout  = true
 % xorout  = 0x0000
-% check   = 0x4B37 for ASCII:"123456789"
+% check   = 0x4b37 for ASCII:"123456789"
 % residue = 0x0000
 % name    = "CRC-16/MODBUS"
 % Class: attested
@@ -18,7 +18,7 @@ function out = crc_16_modbus(message, check)
 
 crc.width   = 16;
 crc.poly    = [1 0 0 0   0 0 0 0   0 0 0 0   0 1 0 1];% x^16 + x^15 + x^2 + x^0 (0x8005)
-crc.init    = true(1,length(crc.poly));% [1 1 1 1   1 1 1 1   1 1 1 1   1 1 1 1];% (0xFFFF)
+crc.init    = true(1,length(crc.poly));% [1 1 1 1   1 1 1 1   1 1 1 1   1 1 1 1];% (0xffff)
 crc.residue = false(1,length(crc.poly));% [0 0 0 0   0 0 0 0   0 0 0 0   0 0 0 0];% (0x0000)
 crc.refin   = true;
 crc.refout  = true;

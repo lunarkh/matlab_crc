@@ -2,12 +2,12 @@ function out = crc_16_ibm_3740(message, check)
 %--settings-------
 % width   = 16
 % poly    = 0x1021
-% init    = 0xFFFF
+% init    = 0xffff
 % refin   = false
 % refout  = false
 % xorout  = 0x0000
-% check   = 0x29B1 for ASCII:"123456789"
-% residue = 0x0000
+% check   = 0x29b1 for ASCII:"123456789"
+% residue = 0x0000 [correct 0xffff]
 % name    = "CRC-16/IBM-3740"
 % Class: attested
 % Alias: CRC-16/AUTOSAR, CRC-16/CCITT-FALSE
@@ -18,8 +18,8 @@ function out = crc_16_ibm_3740(message, check)
 
 crc.width   = 16;
 crc.poly    = [0 0 0 1   0 0 0 0   0 0 1 0   0 0 0 1];% x^16 + x^12 + x^5 + x^0 (0x1021)
-crc.init    = true(1,length(crc.poly));% [1 1 1 1   1 1 1 1   1 1 1 1   1 1 1 1];% (0xFFFF)
-crc.residue = true(1,length(crc.poly));% [1 1 1 1   1 1 1 1   1 1 1 1   1 1 1 1];% (0xFFFF)
+crc.init    = true(1,length(crc.poly));% [1 1 1 1   1 1 1 1   1 1 1 1   1 1 1 1];% (0xffff)
+crc.residue = true(1,length(crc.poly));% [1 1 1 1   1 1 1 1   1 1 1 1   1 1 1 1];% (0xffff)
 crc.refin   = false;
 crc.refout  = false;
 crc.xorout  = false(1,length(crc.poly));% [0 0 0 0   0 0 0 0   0 0 0 0   0 0 0 0];% (0x0000)

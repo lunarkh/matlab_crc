@@ -1,5 +1,6 @@
 clc;% clear command window
 % for check https://crccalc.com/
+% https://www.lddgo.net/en/encrypt/crc
 message = '313233343536373839';% ASCII:"123456789"
 % message = '41424344434146454641434531323334';% ASCII:"ABCDCAFEFACE1234"
 

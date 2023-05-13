@@ -39,6 +39,9 @@ crc_hex_lut = crc_16_ibm_3740_lut([message crc_hex_lut]); disp(" - check lut = 0
 disp(" CRC-16/IBM-SDLC. Alias: CRC-16/ISO-HDLC, CRC-16/ISO-IEC-14443-3-B, CRC-16/X-25, CRC-B, X-25");% ASCII:"123456789" crc_check:"0x906e"
 crc_hex = crc_16_ibm_sdlc(message, false);          disp(" - calc  = 0x" + crc_hex); disp(" ");
 
+disp(" CRC-16/ISO-IEC-14443-3-A. Alias: CRC-A");% ASCII:"123456789" crc_check:"0xbf05"
+crc_hex = crc_16_iso_iec_14443_3_a(message, false);          disp(" - calc  = 0x" + crc_hex); disp(" ");
+
 disp(" CRC-16/MODBUS. Alias: MODBUS");% ASCII:"123456789" crc_check:"0x4b37"
 crc_hex = crc_16_modbus(message, false);          disp(" - calc  = 0x" + crc_hex);
 crc_hex = crc_16_modbus([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");

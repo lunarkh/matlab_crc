@@ -42,6 +42,9 @@ crc_hex = crc_16_ibm_sdlc(message, false);          disp(" - calc  = 0x" + crc_h
 disp(" CRC-16/ISO-IEC-14443-3-A. Alias: CRC-A");% ASCII:"123456789" crc_check:"0xbf05"
 crc_hex = crc_16_iso_iec_14443_3_a(message, false);          disp(" - calc  = 0x" + crc_hex); disp(" ");
 
+disp(" CRC-16/KERMIT. Alias: CRC-16/BLUETOOTH, CRC-16/CCITT, CRC-16/CCITT-TRUE, CRC-16/V-41-LSB, CRC-CCITT, KERMIT");% ASCII:"123456789" crc_check:"0x2189"
+crc_hex = crc_16_kermit(message, false);          disp(" - calc  = 0x" + crc_hex); disp(" ");
+
 disp(" CRC-16/MODBUS. Alias: MODBUS");% ASCII:"123456789" crc_check:"0x4b37"
 crc_hex = crc_16_modbus(message, false);          disp(" - calc  = 0x" + crc_hex);
 crc_hex = crc_16_modbus([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");

@@ -8,7 +8,7 @@ function out = crc_16_m17(message, check)
 % xorout  = 0x0000
 % check   = 0x772b for ASCII:"123456789"
 % residue = 0x0000
-% name    = "CRC-16/LJ1200"
+% name    = "CRC-16/M17"
 % Class: attested
 % Contributed by Mark Adler.
 % M17 Project (8 Mar 2022), M17 protocol specification: Data link layer

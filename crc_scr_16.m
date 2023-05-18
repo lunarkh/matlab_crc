@@ -49,6 +49,9 @@ disp(" CRC-16/LJ1200");% ASCII:"123456789" crc_check:"0xbdf4"
 crc_hex = crc_16_lj1200(message, false);          disp(" - calc  = 0x" + crc_hex);
 crc_hex = crc_16_lj1200([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");
 
+disp(" CRC-16/M17");% ASCII:"123456789" crc_check:"0x772b"
+crc_hex = crc_16_m17(message, false);          disp(" - calc  = 0x" + crc_hex); disp(" ");
+
 disp(" CRC-16/MODBUS. Alias: MODBUS");% ASCII:"123456789" crc_check:"0x4b37"
 crc_hex = crc_16_modbus(message, false);          disp(" - calc  = 0x" + crc_hex);
 crc_hex = crc_16_modbus([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");

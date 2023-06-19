@@ -21,7 +21,7 @@ vbit = 4;%hex(4bit)
 
 bit_vector = false(1, (vbit*info_len));
 for i = 1:info_len
-    bit_vector(1, (1+(vbit*(i-1))):vbit*i) = decimalToBinaryVector(hex2dec(message(i)), vbit);
+    bit_vector(1, (1+(vbit*(i-1))):vbit*i) = flip(de2bi(hex2dec(message(i)), vbit));
 end
 
 crc_t  = true(1, 16); %init = 0xffff
@@ -61,15 +61,15 @@ crc_tbl = (['0000' '1021' '2042' '3063' '4084' '50a5' '60c6' '70e7' ...%8
 
 for i = 1:8:length(bit_vector)
     table_index = bitxor(crc_t(1:8), bit_vector(i:i+7));% index calculator
-    start_index = binaryVectorToDecimal(table_index) + 1;% ^
+    start_index = bin2dec(num2str(table_index)) + 1;% ^
     table_val = zeros(1,16);
 
     for j = 1:4% hex 2 bin array
-        table_val(1, (1+(vbit*(j-1))):vbit*j) = decimalToBinaryVector(hex2dec(crc_tbl((((start_index*4)-3)+(j-1)))), vbit);
+        table_val(1, (1+(vbit*(j-1))):vbit*j) = flip(de2bi(hex2dec(crc_tbl((((start_index*4)-3)+(j-1)))), vbit));
     end
 
     crc_t = ([crc_t(9:16) 0 0 0 0 0 0 0 0]);% (crc_t << 8)
     crc_t = xor(crc_t, table_val);% crc16 xor table
 end
 
-crc = binaryVectorToHex(xor(crc_t, false(1,16)));% xorout = 0x0000
+crc = dec2hex(bin2dec(num2str(xor(crc_t, false(1,16)))),4);% xorout = 0x0000

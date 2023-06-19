@@ -45,6 +45,6 @@ crc.message = message;
 
 crc.calc_bin = crc_uni(crc.width, crc.poly, crc.init, crc.residue, crc.refin, crc.refout, crc.xorout, crc.mode, crc.message);
 
-out =  binaryVectorToHex(crc.calc_bin);
+out = dec2hex(bin2dec(num2str((crc.calc_bin))),2);
 
 end

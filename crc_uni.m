@@ -23,9 +23,9 @@ for i = 1:info_len
         else
             temp = -1;
         end
-        bit_vector(1, (1+(vbit*(i-1))):vbit*i) = flip(decimalToBinaryVector(hex2dec(message(i+temp)), vbit));
+        bit_vector(1, (1+(vbit*(i-1))):vbit*i) = de2bi(hex2dec(message(i+temp)), vbit);
     else
-        bit_vector(1, (1+(vbit*(i-1))):vbit*i) = decimalToBinaryVector(hex2dec(message(i)), vbit);
+        bit_vector(1, (1+(vbit*(i-1))):vbit*i) = flip(de2bi(hex2dec(message(i)), vbit));
     end
 end
 

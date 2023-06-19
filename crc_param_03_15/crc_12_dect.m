@@ -15,7 +15,7 @@ function out = crc_12_dect(message, check)
 % - Definition: Residue; full mathematical description (Section 6.2.5.4, pp.99–101)
 
 crc.width   = 12;
-crc.poly    = [1 0 0 0   0 0 0 0   1 1 1 1];% x^12 + x^11 + x^4  + x^3 + x^1 + x^0(0x80f)
+crc.poly    = [1 0 0 0   0 0 0 0   1 1 1 1];% x^12 + x^11 + x^3 + x^2 + x^1 + x^0(0x80f)
 crc.init    = false(1,length(crc.poly));% [0 0 0 0   0 0 0 0   0 0 0 0];% (0x000)
 crc.residue = false(1,length(crc.poly));% [0 0 0 0   0 0 0 0   0 0 0 0];% (0x000)
 crc.refin   = false;
@@ -26,6 +26,6 @@ crc.message = message;
 
 crc.calc_bin = crc_uni(crc.width, crc.poly, crc.init, crc.residue, crc.refin, crc.refout, crc.xorout, crc.mode, crc.message);
 
-out =  binaryVectorToHex(crc.calc_bin);
+out = dec2hex(bin2dec(num2str((crc.calc_bin))),4);
 
 end

@@ -61,3 +61,7 @@ crc_hex = crc_16_mcrf4xx(message, false);          disp(" - calc  = 0x" + crc_he
 disp("CRC-16/MODBUS. Alias: MODBUS");% ASCII:"123456789" crc_check:"0x4b37"
 crc_hex = crc_16_modbus(message, false);          disp(" - calc  = 0x" + crc_hex);
 crc_hex = crc_16_modbus([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");
+
+disp("CRC-16/NRSC-5");% ASCII:"123456789" crc_check:"0xa066"
+crc_hex = crc_16_nrsc_5(message, false);          disp(" - calc  = 0x" + crc_hex);
+crc_hex = crc_16_nrsc_5([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");

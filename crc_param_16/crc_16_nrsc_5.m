@@ -10,7 +10,6 @@ function out = crc_16_nrsc_5(message, check)
 % residue = 0x0000
 % name    = "CRC-16/NRSC-5"
 % Class: attested
-% Class: attested
 % Implemented in standard NRSC-5-D as a 16-bit CRC truncated (punctured) to 12 bits.
 % The upper 4 bits, the last to leave the shift register, are discarded.
 % Init = 0xFFFF implements the algorithm prescribed by iBiquity on 80-bit PDUs. 
@@ -48,6 +47,7 @@ if(check)% CRC presented low byte first. (14)                                   
 else
     crc.message = message;
 end
+
 crc.calc_bin = crc_uni(crc.width, crc.poly, crc.init, crc.init, crc.refin, crc.refout, crc.xorout, crc.mode, crc.message);
 
 out = dec2hex(bin2dec(num2str((crc.calc_bin))),4);

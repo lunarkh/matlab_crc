@@ -95,3 +95,7 @@ crc_hex = crc_16_teledisk([message crc_hex], true); disp(" - check = 0x" + crc_h
 disp("CRC-16/TMS37157");% ASCII:"123456789" crc_check:"0x26b1"
 crc_hex = crc_16_tms37157(message, false);          disp(" - calc  = 0x" + crc_hex); disp(" ");
 
+disp("CRC-16/UMTS. Alias: CRC-16/BUYPASS, CRC-16/VERIFONE");% ASCII:"123456789" crc_check:"0xfee8"
+crc_hex = crc_16_umts(message, false);          disp(" - calc  = 0x" + crc_hex);
+crc_hex = crc_16_umts([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");
+

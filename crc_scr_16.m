@@ -88,3 +88,7 @@ disp("CRC-16/T10-DIF");% ASCII:"123456789" crc_check:"0xd0db"
 crc_hex = crc_16_t10_dif(message, false);          disp(" - calc  = 0x" + crc_hex);
 crc_hex = crc_16_t10_dif([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");
 
+disp("CRC-16/TELEDISK");% ASCII:"123456789" crc_check:"0x0fb3"
+crc_hex = crc_16_teledisk(message, false);          disp(" - calc  = 0x" + crc_hex);
+crc_hex = crc_16_teledisk([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");
+

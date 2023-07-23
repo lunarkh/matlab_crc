@@ -102,3 +102,7 @@ crc_hex = crc_16_umts([message crc_hex], true); disp(" - check = 0x" + crc_hex);
 disp("CRC-16/USB");% ASCII:"123456789" crc_check:"0xb4c8"
 crc_hex = crc_16_usb(message, false);          disp(" - calc  = 0x" + crc_hex); disp(" ");
 
+disp("CRC-16/XMODEM. Alias: CRC-16/ACORN, CRC-16/LTE, CRC-16/V-41-MSB, XMODEM, ZMODEM");% ASCII:"123456789" crc_check:"0x31c3"
+crc_hex = crc_16_xmodem(message, false);          disp(" - calc  = 0x" + crc_hex);
+crc_hex = crc_16_xmodem([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");
+

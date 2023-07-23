@@ -84,3 +84,7 @@ disp("CRC-16/SPI-FUJITSU. Alias: CRC-16/AUG-CCITT");% ASCII:"123456789" crc_chec
 crc_hex = crc_16_spi_fujitsu(message, false);          disp(" - calc  = 0x" + crc_hex);
 crc_hex = crc_16_spi_fujitsu([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");
 
+disp("CRC-16/T10-DIF");% ASCII:"123456789" crc_check:"0xd0db"
+crc_hex = crc_16_t10_dif(message, false);          disp(" - calc  = 0x" + crc_hex);
+crc_hex = crc_16_t10_dif([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");
+

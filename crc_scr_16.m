@@ -92,3 +92,6 @@ disp("CRC-16/TELEDISK");% ASCII:"123456789" crc_check:"0x0fb3"
 crc_hex = crc_16_teledisk(message, false);          disp(" - calc  = 0x" + crc_hex);
 crc_hex = crc_16_teledisk([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");
 
+disp("CRC-16/TMS37157");% ASCII:"123456789" crc_check:"0x26b1"
+crc_hex = crc_16_tms37157(message, false);          disp(" - calc  = 0x" + crc_hex); disp(" ");
+

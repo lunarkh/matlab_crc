@@ -74,9 +74,13 @@ disp("CRC-16/OPENSAFETY-B");% ASCII:"123456789" crc_check:"0x20fe"
 crc_hex = crc_16_opensafety_b(message, false);          disp(" - calc  = 0x" + crc_hex);
 crc_hex = crc_16_opensafety_b([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");
 
-disp("CRC-16/PROFIBUS");% ASCII:"123456789" crc_check:"0xa819"
+disp("CRC-16/PROFIBUS. Alias: CRC-16/IEC-61158-2");% ASCII:"123456789" crc_check:"0xa819"
 crc_hex = crc_16_profibus(message, false);          disp(" - calc  = 0x" + crc_hex); disp(" ");
 
 disp("CRC-16/RIELLO");% ASCII:"123456789" crc_check:"0x63d0"
 crc_hex = crc_16_riello(message, false);          disp(" - calc  = 0x" + crc_hex); disp(" ");
+
+disp("CRC-16/SPI-FUJITSU. Alias: CRC-16/AUG-CCITT");% ASCII:"123456789" crc_check:"0xe5cc"
+crc_hex = crc_16_spi_fujitsu(message, false);          disp(" - calc  = 0x" + crc_hex);
+crc_hex = crc_16_spi_fujitsu([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");
 

@@ -8,7 +8,7 @@ function out = crc_16_riello(message, check)
 % xorout  = 0x0000
 % check   = 0x63d0 for ASCII:"123456789"
 % residue = 0x0000
-% name    = "CRC-16/PROFIBUS"
+% name    = "CRC-16/RIELLO"
 % Class: third-party
 % Reported for a Riello Dialog UPS.
 % "Snamprogetti" (17 April 2009), Computer Interfacing Forum topic 1305 (courtesy of the Internet Archive)

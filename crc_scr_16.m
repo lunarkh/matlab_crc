@@ -99,3 +99,6 @@ disp("CRC-16/UMTS. Alias: CRC-16/BUYPASS, CRC-16/VERIFONE");% ASCII:"123456789" 
 crc_hex = crc_16_umts(message, false);          disp(" - calc  = 0x" + crc_hex);
 crc_hex = crc_16_umts([message crc_hex], true); disp(" - check = 0x" + crc_hex); disp(" ");
 
+disp("CRC-16/USB");% ASCII:"123456789" crc_check:"0xb4c8"
+crc_hex = crc_16_usb(message, false);          disp(" - calc  = 0x" + crc_hex); disp(" ");
+
